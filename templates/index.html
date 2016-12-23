@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<title>Welcome to the Book Collector</title>
+	<style type="text/css">
+		body {
+			background-image: url("http://whytoread.com/wp-content/uploads/2015/03/best-books-book-youll-ever-read.jpg");
+			background-size: 100%;	
+		}
+
+		h1 {
+			color: white;
+			text-shadow: 1px 1px #333;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Welcome to the Book Collector</h1>
+	<a href="{{ url_for('post') }}">
+		<input type="button" value="POST A BOOK" name="POST">
+	</a>
+
+	<a href="{{ url_for('books') }}">
+		<input type="button" value="SEE ALL BOOKS" name="LIST">
+	</a>
+
+</body>
+
+</html>

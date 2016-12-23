@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>List of all books</title>
+		<style type="text/css">
+		body {
+			background-image: url("http://whytoread.com/wp-content/uploads/2015/03/best-books-book-youll-ever-read.jpg");
+			background-size: 100%;	
+		}
+
+		h1 {
+			color: white;
+			text-shadow: 1px 1px #333;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		table {
+			color: white;
+		}
+
+		td {
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+
+		<table class="list">
+			<thead style="color: lightgreen; font-weight: 700;">
+				<td>Title</td>
+				<td>Author</td>
+				<td>Publisher</td>
+				<td>Year</td>
+			</thead>
+
+			{% for row in rows %}
+			<tr>
+				<td>{{row["title"]}}</td>
+				<td>{{row["author"]}}</td>
+				<td>{{row["publisher"]}}</td>
+				<td>{{row['year']}}</td>
+				<td><a style="color: red;" href="{{ url_for('deletebook', bookid = row.bookid) }}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+		<br><br>
+		<a style="color: lightblue;" href = "/">Go back to home page</a>
+
+</body>
+</html>
