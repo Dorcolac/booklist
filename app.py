@@ -28,7 +28,7 @@ def addbook():
 				cur = con.cursor()
 				cur.execute("INSERT INTO books (title,author,publisher,year) VALUES (?,?,?,?)",(title,author,publisher,year) )
 				con.commit()
-				msg = "Successfully added!"
+				msg = "Successfully added"
 
 		except Exception as e:
 			print e.message
